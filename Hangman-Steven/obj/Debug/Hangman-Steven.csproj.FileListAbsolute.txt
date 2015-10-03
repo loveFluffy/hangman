@@ -1,0 +1,17 @@
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\Hangman-Steven.exe.config
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\Hangman-Steven.exe
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\Hangman-Steven.pdb
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman-Steven.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman_Steven.Hangman.resources
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman_Steven.Properties.Resources.resources
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman-Steven.csproj.GenerateResource.Cache
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman-Steven.exe
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman-Steven.pdb
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman_Steven.Configure.resources
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\Interop.WMPLib.dll
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Interop.WMPLib.dll
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman-Steven.csproj.ResolveComReference.cache
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman_Steven.freqComRare.resources
+C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\obj\Debug\Hangman_Steven.Resource.resources
