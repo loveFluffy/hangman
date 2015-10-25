@@ -580,6 +580,11 @@ namespace Hangman_Steven
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
+            //test code
+            //This is a test message of new branch.
+            //test message again.
+
+            
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
 

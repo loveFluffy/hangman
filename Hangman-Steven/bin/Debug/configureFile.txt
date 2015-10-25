@@ -8,9 +8,9 @@ C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\letterSuccess.mp3
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\loseGame.mp3
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\gameWon.mp3
-128
 255
-0
+255
+255
 100
 100
 100
@@ -61,6 +61,5 @@ C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin
 -8
 1
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\dataFile\data.txt
-
 
 
