@@ -123,9 +123,6 @@
     Programmed and Developed by: Xiaofeng Xu (Bliss)
 This program is copyrighted under international law. It may be used freely for educational purposes. It may not be sold or used commercially. If you find bugs, want to ask a question, wish to make suggestions or if you want to expand the functionality of this program, you may contact the designer through the contact page at unifiedthinking.com .</value>
   </data>
-  <metadata name="lineLabel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="axWindowsMediaPlayer.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w

@@ -580,11 +580,6 @@ namespace Hangman_Steven
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
-            //test code
-            //This is a test message of new branch.
-            //test message again.
-
-            
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
 
@@ -1368,6 +1363,8 @@ namespace Hangman_Steven
         {
             axWindowsMediaPlayer.settings.playCount = 1;
             axWindowsMediaPlayer.URL = Application.StartupPath + "\\a2z\\a.mp3";
+
+            //test code
             MessageBox.Show("A");
             int tmpNum = buttonClick("a", buttonA);
             changePicturePanel(letterA, tmpNum);
@@ -1926,7 +1923,45 @@ namespace Hangman_Steven
                     break;
             }
             base.WndProc(ref m);
-        } 
+        }
+
+        private void buttonA2Z_Click(object sender, EventArgs e)
+        {
+            //test code
+            //MessageBox.Show(sender.GetHashCode().ToString());
+            //MessageBox.Show(sender.GetType().ToString());
+            //MessageBox.Show(sender.name)//wrong code!
+            //MessageBox.Show(this.Name);
+            MessageBox.Show()
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //test code
+        //private void testClick(object sender, EventArgs e)
+        //{
+        //    if (sender.Equals(buttonA))
+        //    {
+        //        MessageBox.Show("you clicked button A");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("you clicked button B");
+        //    }
+        //} 
         
 
         

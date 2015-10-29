@@ -27,7 +27,7 @@ C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin
 255
 0
 255
-3
+1
 2
 2
 2
