@@ -79,11 +79,13 @@
             this.TeamLabel2 = new System.Windows.Forms.Label();
             this.TeamLabel1 = new System.Windows.Forms.Label();
             this.barTimer = new System.Windows.Forms.Timer(this.components);
+            this.tmpPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.buttonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chooseSentence)).BeginInit();
             this.picturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -108,6 +110,7 @@
             // 
             // buttonPanel
             // 
+            this.buttonPanel.Controls.Add(this.tmpPlayer);
             this.buttonPanel.Controls.Add(this.arrowLabel);
             this.buttonPanel.Controls.Add(this.axWindowsMediaPlayer);
             this.buttonPanel.Controls.Add(this.ConfigureButton);
@@ -171,6 +174,7 @@
             this.axWindowsMediaPlayer.Size = new System.Drawing.Size(148, 102);
             this.axWindowsMediaPlayer.TabIndex = 45;
             this.axWindowsMediaPlayer.Visible = false;
+            this.axWindowsMediaPlayer.Enter += new System.EventHandler(this.axWindowsMediaPlayer_Enter);
             // 
             // ConfigureButton
             // 
@@ -612,6 +616,16 @@
             this.barTimer.Interval = 1;
             this.barTimer.Tick += new System.EventHandler(this.barTimer_Tick);
             // 
+            // tmpPlayer
+            // 
+            this.tmpPlayer.Enabled = true;
+            this.tmpPlayer.Location = new System.Drawing.Point(422, 193);
+            this.tmpPlayer.Name = "tmpPlayer";
+            this.tmpPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tmpPlayer.OcxState")));
+            this.tmpPlayer.Size = new System.Drawing.Size(75, 23);
+            this.tmpPlayer.TabIndex = 46;
+            this.tmpPlayer.Visible = false;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -633,6 +647,7 @@
             this.picturePanel.ResumeLayout(false);
             this.picturePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -688,6 +703,7 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
         private System.Windows.Forms.Label arrowLabel;
         private System.Windows.Forms.PictureBox pictureBox;
+        private AxWMPLib.AxWindowsMediaPlayer tmpPlayer;
     }
 }
 

@@ -12,7 +12,6 @@ using System.Text.RegularExpressions;
 using System.Media;
 using System.Runtime.InteropServices;
 
-
 namespace Hangman_Steven
 {
     public partial class Hangman : Form
@@ -1359,13 +1358,11 @@ namespace Hangman_Steven
         private int unclickedButtonNum = 25;
 
         //键盘区
+        //(Those codes[buttonA_Click(){} ~ buttonZ_Click(){}] have been covered by function buttonA2Z_Click())
         private void buttonA_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer.settings.playCount = 1;
-            axWindowsMediaPlayer.URL = Application.StartupPath + "\\a2z\\a.mp3";
-
-            //test code
-            MessageBox.Show("A");
+            //axWindowsMediaPlayer.settings.playCount = 1;
+            //axWindowsMediaPlayer.URL = Application.StartupPath + "\\a2z\\a.mp3";
             int tmpNum = buttonClick("a", buttonA);
             changePicturePanel(letterA, tmpNum);
         }
@@ -1925,14 +1922,32 @@ namespace Hangman_Steven
             base.WndProc(ref m);
         }
 
+        //buttonA_Click(){} ~ buttonZ_Click(){}
         private void buttonA2Z_Click(object sender, EventArgs e)
         {
-            //test code
-            //MessageBox.Show(sender.GetHashCode().ToString());
-            //MessageBox.Show(sender.GetType().ToString());
-            //MessageBox.Show(sender.name)//wrong code!
-            //MessageBox.Show(this.Name);
-            MessageBox.Show()
+            Button tmpButton = (Button)sender;
+            string tmpNamend=tmpButton.Name.Substring(tmpButton.Name.Length-1,1);
+
+            int tmpNum = buttonClick(tmpNamend.ToLower(), tmpButton);
+            if ((tmpNum==1)&&(speakLetterMode!=0))
+            {
+                tmpPlayer.settings.playCount = speakLetterMode;
+                tmpPlayer.URL = Application.StartupPath + "\\a2z\\" + tmpNamend.ToLower() + ".mp3";
+            }
+
+            string letterSender = "letter" + tmpNamend;
+            int LetterValue = (int)this.GetType().GetField(letterSender).GetValue(this);
+            changePicturePanel(LetterValue, tmpNum);
+        }
+
+
+
+
+
+
+
+        private void axWindowsMediaPlayer_Enter(object sender, EventArgs e)
+        {
 
         }
 
