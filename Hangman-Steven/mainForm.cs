@@ -1945,38 +1945,11 @@ namespace Hangman_Steven
 
 
 
-
+        //useless function
         private void axWindowsMediaPlayer_Enter(object sender, EventArgs e)
         {
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //test code
-        //private void testClick(object sender, EventArgs e)
-        //{
-        //    if (sender.Equals(buttonA))
-        //    {
-        //        MessageBox.Show("you clicked button A");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("you clicked button B");
-        //    }
-        //} 
         
 
         

@@ -1,8 +1,8 @@
 3
 1
-500
+0
 2
-4
+0
 0
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\letterFailure.mp3
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\letterSuccess.mp3
@@ -61,5 +61,6 @@ C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin
 -8
 1
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\dataFile\data.txt
+
 
 

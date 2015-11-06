@@ -476,9 +476,6 @@ namespace Hangman_Steven
             mainForm.letterX = BackColor2Num(buttonX);
             mainForm.letterY = BackColor2Num(buttonY);
             mainForm.letterZ = BackColor2Num(buttonZ);
-
-            //Hangman.letterZ = BackColor2Num(buttonZ);
-
             //letter values
             mainForm.frequentSuccess = Int32.Parse(chooseFrequentSuccess.Value.ToString());
             mainForm.frequentFailure = Int32.Parse(chooseFrequentFailure.Value.ToString());
