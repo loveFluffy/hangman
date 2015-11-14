@@ -11,14 +11,15 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Media;
 using System.Runtime.InteropServices;
+using CSharp全局鼠标键盘Hook;
 
 namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
         //test code
-        //MouseHook mouseHook;
-        //KeyBordHook keybordHook;
+        MouseHook mouseHook;
+        KeyBordHook keybordHook;
 
         ///////////////////////
         //设置界面传回值变量
