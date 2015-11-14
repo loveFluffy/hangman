@@ -17,8 +17,7 @@ namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
-        //global mouse/Keybord hook
-        MouseHook mouseHook;
+        //global Keybord hook
         KeyBordHook KeyHook;
 
         
@@ -149,18 +148,6 @@ namespace Hangman_Steven
 
         //当前显示的第几张图片
         private int pictureNum = 1;
-
-        
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -590,19 +577,14 @@ namespace Hangman_Steven
         //键盘事件处理程序
         public void key_OnMouseActivity(object sender, KeyEventArgs e)
         {
-            //listBox1.Items.Add(e.KeyCode.ToString());
-            //listBox1.SelectedIndex = listBox1.Items.Count - 1;
-            MessageBox.Show(e.KeyCode.ToString());
+            //test code
+            //if (e.KeyCode.ToString().Equals("A")&&(this.ActiveControl))
+            //{
+            //    MessageBox.Show(e.KeyCode.ToString());
+            //}
+            
 
             Application.DoEvents();
-        }
-
-        //鼠标事件处理程序
-        public void mouseHook_OnMouseActivity(object sender, MouseEventArgs e)
-        {
-            //listBox1.Items.Add(e.Location.ToString());
-            //listBox1.SelectedIndex = listBox1.Items.Count - 1;
-            //Application.DoEvents();
         }
 
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
@@ -613,15 +595,9 @@ namespace Hangman_Steven
                 //安装键盘钩子
                 KeyHook = new KeyBordHook();
                 KeyHook.OnKeyDownEvent += new KeyEventHandler(key_OnMouseActivity);
-
-                //安装鼠标钩子
-                mouseHook = new MouseHook();
-                mouseHook.OnMouseActivity += new MouseEventHandler(mouseHook_OnMouseActivity);
-                mouseHook.Start();
             }
             catch (System.Exception ex)
             {
-                //listBox1.Items.Add(ex.Message);
                 MessageBox.Show(ex.Message);//这里可能会弹出大量窗口？？？？！！！
                 Application.DoEvents();
             }
@@ -892,28 +868,6 @@ namespace Hangman_Steven
             authorPartDealed = authorPart;
 
             return 0;
-
-
-            //for (int i = 0; i < tmpScreenString.Length; i++)
-            //{
-            //    //防止越界
-            //    int tmpStart = i * letterNumEveryLine;
-            //    int tmpLengthLeft = tmpScreenString.Length - tmpStart;
-            //    if (tmpLengthLeft <= letterNumEveryLine)
-            //    {
-            //        screenPart += tmpScreenString.Substring(i * letterNumEveryLine, tmpLengthLeft);
-            //        break;
-            //    }
-
-            //    screenPart += tmpScreenString.Substring(i * letterNumEveryLine, letterNumEveryLine) + '\n';
-            //}
-
-            //加上作者部分，显示在mainScreen上
-            //screenPart = screenPart + '\n' + authorPart;
-            //mainScreen.Text = screenPart;
-
-            //设置格式
-
         }
 
         //计算格式（根据mainPartDealed变量和authorPartDealed变量对当前mainScreen显示的内容进行格式设置）
@@ -1603,6 +1557,11 @@ namespace Hangman_Steven
         //热键注销
         private void Hangman_Leave(object sender, EventArgs e)
         {
+            //test code
+            MessageBox.Show("hangman leave message.");
+
+
+
             HotKey.UnregisterHotKey(Handle, 101);
             HotKey.UnregisterHotKey(Handle, 102);
             HotKey.UnregisterHotKey(Handle, 103);
@@ -1997,6 +1956,23 @@ namespace Hangman_Steven
         //useless function
         private void axWindowsMediaPlayer_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void Hangman_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            //test code
+            if (e.KeyCode == Keys.B && e.Modifiers == Keys.Control)
+            {
+                MessageBox.Show("Ctrl+A");
+            }
+
+            //test code
+            if (e.KeyCode == Keys.A)
+            {
+                MessageBox.Show("A");
+            }
 
         }
         

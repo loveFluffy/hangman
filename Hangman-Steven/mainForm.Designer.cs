@@ -640,6 +640,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Hangman_Activated);
             this.Load += new System.EventHandler(this.Hangman_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             this.Leave += new System.EventHandler(this.Hangman_Leave);
             this.buttonPanel.ResumeLayout(false);
             this.buttonPanel.PerformLayout();
