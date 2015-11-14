@@ -573,13 +573,6 @@ namespace Hangman_Steven
         //键盘事件处理程序
         public void key_OnMouseActivity(object sender, KeyEventArgs e)
         {
-            //test code
-            //if (e.KeyCode.ToString().Equals("A")&&(this.ActiveControl))
-            //{
-            //    MessageBox.Show(e.KeyCode.ToString());
-            //}
-            
-
             Application.DoEvents();
         }
 
@@ -1669,6 +1662,29 @@ namespace Hangman_Steven
         {
             string tmpLetter=e.KeyCode.ToString();
 
+            //stop timer
+            if (e.KeyCode == Keys.Space)
+            {
+                //没有键是可以按的
+                if (!checkButtonsEnable())
+                {
+                    return;
+                }
+                if (barTimer.Enabled == true)
+                {
+                    barTimer.Enabled = false;
+                    timeBar.Value = 0;
+                }
+                else
+                {
+                    barTimer.Enabled = true;
+                }
+
+                return;
+            }
+
+            
+
             if (e.Modifiers==Keys.None)
             {
                 if (tmpLetter.Equals("A") && buttonA.Enabled)
@@ -1775,17 +1791,32 @@ namespace Hangman_Steven
                 {
                     buttonA2Z_Click(buttonZ, e);
                 }
-                else
+                else 
                 {
 
                 }
             }
             else
             {
-                if (e.Modifiers == Keys.Control)
+                //Clear scores
+                if (((Control.ModifierKeys & Keys.Shift) != Keys.Shift))
                 {
-
-                }
+                    if ((Control.ModifierKeys & Keys.Alt) != Keys.Alt)
+                    {
+                        if (teamsMode == 0)
+                        {
+                            changePicture(1);
+                        }
+                        else
+                        {
+                            clearAllScore();
+                            setArrowBegin();
+                        }
+                        unableButtons();
+                        barTimer.Enabled = false;
+                    }
+                    
+                } 
             }
         }
         
