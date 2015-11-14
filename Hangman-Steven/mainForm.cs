@@ -17,8 +17,9 @@ namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
-        //test code
-        
+        //global mouse/Keybord hook
+        MouseHook mouseHook;
+        KeyBordHook KeyHook;
 
         
 
@@ -591,6 +592,8 @@ namespace Hangman_Steven
         {
             //listBox1.Items.Add(e.KeyCode.ToString());
             //listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            MessageBox.Show(e.KeyCode.ToString());
+
             Application.DoEvents();
         }
 
@@ -599,16 +602,12 @@ namespace Hangman_Steven
         {
             //listBox1.Items.Add(e.Location.ToString());
             //listBox1.SelectedIndex = listBox1.Items.Count - 1;
-            Application.DoEvents();
+            //Application.DoEvents();
         }
 
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
-            //test code
-            MouseHook mouseHook;
-            KeyBordHook KeyHook;
-
             try
             {
                 //安装键盘钩子
