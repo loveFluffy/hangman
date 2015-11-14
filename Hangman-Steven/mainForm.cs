@@ -583,7 +583,7 @@ namespace Hangman_Steven
 
 
 
-
+        ////////////////////////////////////////////////////////////////////////////////
 
 
         //键盘事件处理程序
@@ -595,7 +595,7 @@ namespace Hangman_Steven
         }
 
         //鼠标事件处理程序
-        void mouseHook_OnMouseActivity(object sender, MouseEventArgs e)
+        public void mouseHook_OnMouseActivity(object sender, MouseEventArgs e)
         {
             //listBox1.Items.Add(e.Location.ToString());
             //listBox1.SelectedIndex = listBox1.Items.Count - 1;
@@ -623,7 +623,7 @@ namespace Hangman_Steven
             catch (System.Exception ex)
             {
                 //listBox1.Items.Add(ex.Message);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);//这里可能会弹出大量窗口？？？？！！！
                 Application.DoEvents();
             }
 
