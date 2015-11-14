@@ -566,16 +566,6 @@ namespace Hangman_Steven
         }
 
 
-
-        ////////////////////////////////////////////////////////////////////////////////
-
-
-        //键盘事件处理程序
-        public void key_OnMouseActivity(object sender, KeyEventArgs e)
-        {
-            Application.DoEvents();
-        }
-
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
@@ -1118,8 +1108,6 @@ namespace Hangman_Steven
                 {
                     if (teamsMode == 0)
                     {
-                        //test code
-                        MessageBox.Show("hehe");
                         mainScreen.SelectionStart = 0;
                         mainScreen.SelectionLength = mainScreen.Text.Length;
                         mainScreen.SelectionFont = noUnderlineFont;
@@ -1319,10 +1307,6 @@ namespace Hangman_Steven
                 if (teamsMode == 0)
                 { 
                     //游戏成功-去掉下划线
-                    
-
-                    //test code
-                    MessageBox.Show("test message.");
                     mainScreen.SelectionStart = 0;
                     mainScreen.SelectionLength = mainScreen.Text.Length;
                     mainScreen.SelectionFont = noUnderlineFont;
