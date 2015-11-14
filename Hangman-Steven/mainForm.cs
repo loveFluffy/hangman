@@ -11,18 +11,11 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Media;
 using System.Runtime.InteropServices;
-using CSharp全局鼠标键盘Hook;
 
 namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
-        //global Keybord hook
-        KeyBordHook KeyHook;
-
-        
-
-
         ///////////////////////
         //设置界面传回值变量
         //（其实这部分没必要赋初始值，
@@ -590,20 +583,6 @@ namespace Hangman_Steven
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
-            try
-            {
-                //安装键盘钩子
-                KeyHook = new KeyBordHook();
-                KeyHook.OnKeyDownEvent += new KeyEventHandler(key_OnMouseActivity);
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);//这里可能会弹出大量窗口？？？？！！！
-                Application.DoEvents();
-            }
-
-            
-
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
 
@@ -1520,79 +1499,6 @@ namespace Hangman_Steven
             //changePicturePanel(letterZ, tmpNum);
         }
 
-
-        //热键设定
-        private void Hangman_Activated(object sender, EventArgs e)
-        {
-            HotKey.RegisterHotKey(Handle, 101, HotKey.KeyModifiers.Shift, Keys.A);
-            HotKey.RegisterHotKey(Handle, 102, HotKey.KeyModifiers.Shift, Keys.B);
-            HotKey.RegisterHotKey(Handle, 103, HotKey.KeyModifiers.Shift, Keys.C);
-            HotKey.RegisterHotKey(Handle, 104, HotKey.KeyModifiers.Shift, Keys.D);
-            HotKey.RegisterHotKey(Handle, 105, HotKey.KeyModifiers.Shift, Keys.E);
-            HotKey.RegisterHotKey(Handle, 106, HotKey.KeyModifiers.Shift, Keys.F);
-            HotKey.RegisterHotKey(Handle, 107, HotKey.KeyModifiers.Shift, Keys.G);
-            HotKey.RegisterHotKey(Handle, 108, HotKey.KeyModifiers.Shift, Keys.H);
-            HotKey.RegisterHotKey(Handle, 109, HotKey.KeyModifiers.Shift, Keys.I);
-            HotKey.RegisterHotKey(Handle, 110, HotKey.KeyModifiers.Shift, Keys.J);
-            HotKey.RegisterHotKey(Handle, 111, HotKey.KeyModifiers.Shift, Keys.K);
-            HotKey.RegisterHotKey(Handle, 112, HotKey.KeyModifiers.Shift, Keys.L);
-            HotKey.RegisterHotKey(Handle, 113, HotKey.KeyModifiers.Shift, Keys.M);
-            HotKey.RegisterHotKey(Handle, 114, HotKey.KeyModifiers.Shift, Keys.N);
-            HotKey.RegisterHotKey(Handle, 115, HotKey.KeyModifiers.Shift, Keys.O);
-            HotKey.RegisterHotKey(Handle, 116, HotKey.KeyModifiers.Shift, Keys.P);
-            HotKey.RegisterHotKey(Handle, 117, HotKey.KeyModifiers.Shift, Keys.Q);
-            HotKey.RegisterHotKey(Handle, 118, HotKey.KeyModifiers.Shift, Keys.R);
-            HotKey.RegisterHotKey(Handle, 119, HotKey.KeyModifiers.Shift, Keys.S);
-            HotKey.RegisterHotKey(Handle, 120, HotKey.KeyModifiers.Shift, Keys.T);
-            HotKey.RegisterHotKey(Handle, 121, HotKey.KeyModifiers.Shift, Keys.U);
-            HotKey.RegisterHotKey(Handle, 122, HotKey.KeyModifiers.Shift, Keys.V);
-            HotKey.RegisterHotKey(Handle, 123, HotKey.KeyModifiers.Shift, Keys.W);
-            HotKey.RegisterHotKey(Handle, 124, HotKey.KeyModifiers.Shift, Keys.X);
-            HotKey.RegisterHotKey(Handle, 125, HotKey.KeyModifiers.Shift, Keys.Y);
-            HotKey.RegisterHotKey(Handle, 126, HotKey.KeyModifiers.Shift, Keys.Z);
-            HotKey.RegisterHotKey(Handle, 127, HotKey.KeyModifiers.Ctrl, Keys.C);//Clear scores
-            HotKey.RegisterHotKey(Handle, 128, HotKey.KeyModifiers.Ctrl, Keys.S);//Stop timer
-        }
-
-        //热键注销
-        private void Hangman_Leave(object sender, EventArgs e)
-        {
-            //test code
-            MessageBox.Show("hangman leave message.");
-
-
-
-            HotKey.UnregisterHotKey(Handle, 101);
-            HotKey.UnregisterHotKey(Handle, 102);
-            HotKey.UnregisterHotKey(Handle, 103);
-            HotKey.UnregisterHotKey(Handle, 104);
-            HotKey.UnregisterHotKey(Handle, 105);
-            HotKey.UnregisterHotKey(Handle, 106);
-            HotKey.UnregisterHotKey(Handle, 107);
-            HotKey.UnregisterHotKey(Handle, 108);
-            HotKey.UnregisterHotKey(Handle, 109);
-            HotKey.UnregisterHotKey(Handle, 110);
-            HotKey.UnregisterHotKey(Handle, 111);
-            HotKey.UnregisterHotKey(Handle, 112);
-            HotKey.UnregisterHotKey(Handle, 113);
-            HotKey.UnregisterHotKey(Handle, 114);
-            HotKey.UnregisterHotKey(Handle, 115);
-            HotKey.UnregisterHotKey(Handle, 116);
-            HotKey.UnregisterHotKey(Handle, 117);
-            HotKey.UnregisterHotKey(Handle, 118);
-            HotKey.UnregisterHotKey(Handle, 119);
-            HotKey.UnregisterHotKey(Handle, 120);
-            HotKey.UnregisterHotKey(Handle, 121);
-            HotKey.UnregisterHotKey(Handle, 122);
-            HotKey.UnregisterHotKey(Handle, 123);
-            HotKey.UnregisterHotKey(Handle, 124);
-            HotKey.UnregisterHotKey(Handle, 125);
-            HotKey.UnregisterHotKey(Handle, 126);
-
-            HotKey.UnregisterHotKey(Handle, 127);
-            HotKey.UnregisterHotKey(Handle, 128);
-        }
-
         //检测当前键盘是否有键是可以按的，有则返回true
         private bool checkButtonsEnable()
         {
@@ -1727,207 +1633,6 @@ namespace Hangman_Steven
             }
 
             return false;
-        }
-
-        /// 监视Windows消息,重载WndProc方法，用于实现热键响应 
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_HOTKEY = 0x0312;
-            //按快捷键  
-            switch (m.Msg)
-            {
-                case WM_HOTKEY:
-                    switch (m.WParam.ToInt32())
-                    {
-                        case 101:
-                            if (buttonA.Enabled == true)
-                            {
-                                buttonA_Click(null, null);
-                            }
-                            break;
-                        case 102:
-                            if (buttonB.Enabled == true)
-                            {
-                                buttonB_Click(null, null);
-                            }
-                            break;
-                        case 103:
-                            if (buttonC.Enabled == true)
-                            {
-                                buttonC_Click(null, null);
-                            }
-                            break;
-                        case 104:
-                            if (buttonD.Enabled == true)
-                            {
-                                buttonD_Click(null, null);
-                            }
-                            break;
-                        case 105:
-                            if (buttonE.Enabled == true)
-                            {
-                                buttonE_Click(null, null);
-                            }
-                            break;
-                        case 106:
-                            if (buttonF.Enabled == true)
-                            {
-                                buttonF_Click(null, null);
-                            }
-                            break;
-                        case 107:
-                            if (buttonG.Enabled == true)
-                            {
-                                buttonG_Click(null, null);
-                            }
-                            break;
-                        case 108:
-                            if (buttonH.Enabled == true)
-                            {
-                                buttonH_Click(null, null);
-                            }
-                            break;
-                        case 109:
-                            if (buttonI.Enabled == true)
-                            {
-                                buttonI_Click(null, null);
-                            }
-                            break;
-                        case 110:
-                            if (buttonJ.Enabled == true)
-                            {
-                                buttonJ_Click(null, null);
-                            }
-                            break;
-                        case 111:
-                            if (buttonK.Enabled == true)
-                            {
-                                buttonK_Click(null, null);
-                            }
-                            break;
-                        case 112:
-                            if (buttonL.Enabled == true)
-                            {
-                                buttonL_Click(null, null);
-                            }
-                            break;
-                        case 113:
-                            if (buttonM.Enabled == true)
-                            {
-                                buttonM_Click(null, null);
-                            }
-                            break;
-                        case 114:
-                            if (buttonN.Enabled == true)
-                            {
-                                buttonN_Click(null, null);
-                            }
-                            break;
-                        case 115:
-                            if (buttonO.Enabled == true)
-                            {
-                                buttonO_Click(null, null);
-                            }
-                            break;
-                        case 116:
-                            if (buttonP.Enabled == true)
-                            {
-                                buttonP_Click(null, null);
-                            }
-                            break;
-                        case 117:
-                            if (buttonQ.Enabled == true)
-                            {
-                                buttonQ_Click(null, null);
-                            }
-                            break;
-                        case 118:
-                            if (buttonR.Enabled == true)
-                            {
-                                buttonR_Click(null, null);
-                            }
-                            break;
-                        case 119:
-                            if (buttonS.Enabled == true)
-                            {
-                                buttonS_Click(null, null);
-                            }
-                            break;
-                        case 120:
-                            if (buttonT.Enabled == true)
-                            {
-                                buttonT_Click(null, null);
-                            }
-                            break;
-                        case 121:
-                            if (buttonU.Enabled == true)
-                            {
-                                buttonU_Click(null, null);
-                            }
-                            break;
-                        case 122:
-                            if (buttonV.Enabled == true)
-                            {
-                                buttonV_Click(null, null);
-                            }
-                            break;
-                        case 123:
-                            if (buttonW.Enabled == true)
-                            {
-                                buttonW_Click(null, null);
-                            }
-                            break;
-                        case 124:
-                            if (buttonX.Enabled == true)
-                            {
-                                buttonX_Click(null, null);
-                            }
-                            break;
-                        case 125:
-                            if (buttonY.Enabled == true)
-                            {
-                                buttonY_Click(null, null);
-                            }
-                            break;
-                        case 126:
-                            if (buttonZ.Enabled == true)
-                            {
-                                buttonZ_Click(null, null);
-                            }
-                            break;
-                        case 127:
-                            if (teamsMode == 0)
-                            {
-                                changePicture(1);
-                            }
-                            else 
-                            {
-                                clearAllScore();
-                                setArrowBegin();
-                            }
-                            unableButtons();
-                            barTimer.Enabled = false;
-                            break;
-                        case 128:
-                            //没有键是可以按的
-                            if(!checkButtonsEnable())
-                            {
-                                break;
-                            }
-                            if (barTimer.Enabled == true)
-                            {
-                                barTimer.Enabled = false;
-                                timeBar.Value = 0;
-                            }
-                            else 
-                            {
-                                barTimer.Enabled = true;
-                            }
-                            break;
-                    }
-                    break;
-            }
-            base.WndProc(ref m);
         }
 
         //buttonA_Click(){} ~ buttonZ_Click(){}
