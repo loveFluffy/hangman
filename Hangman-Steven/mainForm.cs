@@ -16,10 +16,6 @@ namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
-
-        
-
-
         ///////////////////////
         //设置界面传回值变量
         //（其实这部分没必要赋初始值，
@@ -120,7 +116,10 @@ namespace Hangman_Steven
             }
         }
 
-
+        private void resetFocus()
+        {
+            buttonA.Focus();
+        }
 
         ///////////////////////
         //宏观私有变量
@@ -587,7 +586,6 @@ namespace Hangman_Steven
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
-            
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
 
@@ -682,6 +680,8 @@ namespace Hangman_Steven
             {
                 startGameButton.Enabled = true;
             }
+
+            resetFocus();
         }
 
         private void verticalLine_Click(object sender, EventArgs e)
@@ -887,7 +887,7 @@ namespace Hangman_Steven
 
         //StartGame键
         private void startGameButton_Click(object sender, EventArgs e)
-        {
+        {   
             //检查保险（没必要）
             //if (chooseSentence.Value == 0)
             //{
@@ -975,6 +975,7 @@ namespace Hangman_Steven
 
             unclickedButtonNum = 25;
 
+            resetFocus();
         }
 
 
@@ -1658,15 +1659,134 @@ namespace Hangman_Steven
             changePicturePanel(LetterValue, tmpNum);
         }
 
-
-
-
-
-
         //useless function
         private void axWindowsMediaPlayer_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Hangman_KeyDown(object sender, KeyEventArgs e)
+        {
+            string tmpLetter=e.KeyCode.ToString();
+
+            if (e.Modifiers==Keys.None)
+            {
+                if (tmpLetter.Equals("A") && buttonA.Enabled)
+                {
+                    buttonA2Z_Click(buttonA, e);
+                }
+                else if (tmpLetter.Equals("B") && buttonB.Enabled)
+                {
+                    buttonA2Z_Click(buttonB, e);
+                }
+                else if (tmpLetter.Equals("C") && buttonC.Enabled)
+                {
+                    buttonA2Z_Click(buttonC, e);
+                }
+                else if (tmpLetter.Equals("D") && buttonD.Enabled)
+                {
+                    buttonA2Z_Click(buttonD, e);
+                }
+                else if (tmpLetter.Equals("E") && buttonE.Enabled)
+                {
+                    buttonA2Z_Click(buttonE, e);
+                }
+                else if (tmpLetter.Equals("F") && buttonF.Enabled)
+                {
+                    buttonA2Z_Click(buttonF, e);
+                }
+                else if (tmpLetter.Equals("G") && buttonG.Enabled)
+                {
+                    buttonA2Z_Click(buttonG, e);
+                }
+                else if (tmpLetter.Equals("H") && buttonH.Enabled)
+                {
+                    buttonA2Z_Click(buttonH, e);
+                }
+                else if (tmpLetter.Equals("I") && buttonI.Enabled)
+                {
+                    buttonA2Z_Click(buttonI, e);
+                }
+                else if (tmpLetter.Equals("J") && buttonJ.Enabled)
+                {
+                    buttonA2Z_Click(buttonJ, e);
+                }
+                else if (tmpLetter.Equals("K") && buttonK.Enabled)
+                {
+                    buttonA2Z_Click(buttonK, e);
+                }
+                else if (tmpLetter.Equals("L") && buttonL.Enabled)
+                {
+                    buttonA2Z_Click(buttonL, e);
+                }
+                else if (tmpLetter.Equals("M") && buttonM.Enabled)
+                {
+                    buttonA2Z_Click(buttonM, e);
+                }
+                else if (tmpLetter.Equals("N") && buttonN.Enabled)
+                {
+                    buttonA2Z_Click(buttonN, e);
+                }
+                else if (tmpLetter.Equals("O") && buttonO.Enabled)
+                {
+                    buttonA2Z_Click(buttonO, e);
+                }
+                else if (tmpLetter.Equals("P") && buttonP.Enabled)
+                {
+                    buttonA2Z_Click(buttonP, e);
+                }
+                else if (tmpLetter.Equals("Q") && buttonQ.Enabled)
+                {
+                    buttonA2Z_Click(buttonQ, e);
+                }
+                else if (tmpLetter.Equals("R") && buttonR.Enabled)
+                {
+                    buttonA2Z_Click(buttonR, e);
+                }
+                else if (tmpLetter.Equals("S") && buttonS.Enabled)
+                {
+                    buttonA2Z_Click(buttonS, e);
+                }
+                else if (tmpLetter.Equals("T") && buttonT.Enabled)
+                {
+                    buttonA2Z_Click(buttonT, e);
+                }
+                else if (tmpLetter.Equals("U") && buttonU.Enabled)
+                {
+                    buttonA2Z_Click(buttonU, e);
+                }
+                else if (tmpLetter.Equals("V") && buttonV.Enabled)
+                {
+                    buttonA2Z_Click(buttonV, e);
+                }
+                else if (tmpLetter.Equals("W") && buttonW.Enabled)
+                {
+                    buttonA2Z_Click(buttonW, e);
+                }
+                else if (tmpLetter.Equals("X") && buttonX.Enabled)
+                {
+                    buttonA2Z_Click(buttonX, e);
+                }
+                else if (tmpLetter.Equals("Y") && buttonY.Enabled)
+                {
+                    buttonA2Z_Click(buttonY, e);
+                }
+                else if (tmpLetter.Equals("Z") && buttonZ.Enabled)
+                {
+                    buttonA2Z_Click(buttonZ, e);
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                if (e.Modifiers == Keys.Control)
+                {
+
+                }
+            }
         }
         
 

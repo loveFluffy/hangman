@@ -99,6 +99,7 @@
             this.mainScreen.Tag = "";
             this.mainScreen.Text = resources.GetString("mainScreen.Text");
             this.mainScreen.TextChanged += new System.EventHandler(this.mainScreen_TextChanged);
+            this.mainScreen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // timeBar
             // 
@@ -269,6 +270,7 @@
             this.buttonZ.Text = "Z";
             this.buttonZ.UseVisualStyleBackColor = true;
             this.buttonZ.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonZ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonY
             // 
@@ -279,6 +281,7 @@
             this.buttonY.Text = "Y";
             this.buttonY.UseVisualStyleBackColor = true;
             this.buttonY.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonX
             // 
@@ -289,6 +292,7 @@
             this.buttonX.Text = "X";
             this.buttonX.UseVisualStyleBackColor = true;
             this.buttonX.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonW
             // 
@@ -299,6 +303,7 @@
             this.buttonW.Text = "W";
             this.buttonW.UseVisualStyleBackColor = true;
             this.buttonW.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonV
             // 
@@ -309,6 +314,7 @@
             this.buttonV.Text = "V";
             this.buttonV.UseVisualStyleBackColor = true;
             this.buttonV.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonU
             // 
@@ -319,6 +325,7 @@
             this.buttonU.Text = "U";
             this.buttonU.UseVisualStyleBackColor = true;
             this.buttonU.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonT
             // 
@@ -329,6 +336,7 @@
             this.buttonT.Text = "T";
             this.buttonT.UseVisualStyleBackColor = true;
             this.buttonT.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonS
             // 
@@ -339,6 +347,7 @@
             this.buttonS.Text = "S";
             this.buttonS.UseVisualStyleBackColor = true;
             this.buttonS.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonR
             // 
@@ -349,6 +358,7 @@
             this.buttonR.Text = "R";
             this.buttonR.UseVisualStyleBackColor = true;
             this.buttonR.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonQ
             // 
@@ -359,6 +369,7 @@
             this.buttonQ.Text = "Q";
             this.buttonQ.UseVisualStyleBackColor = true;
             this.buttonQ.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonQ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonP
             // 
@@ -369,6 +380,7 @@
             this.buttonP.Text = "P";
             this.buttonP.UseVisualStyleBackColor = true;
             this.buttonP.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonO
             // 
@@ -379,6 +391,7 @@
             this.buttonO.Text = "O";
             this.buttonO.UseVisualStyleBackColor = true;
             this.buttonO.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonN
             // 
@@ -389,6 +402,7 @@
             this.buttonN.Text = "N";
             this.buttonN.UseVisualStyleBackColor = true;
             this.buttonN.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonM
             // 
@@ -399,6 +413,7 @@
             this.buttonM.Text = "M";
             this.buttonM.UseVisualStyleBackColor = true;
             this.buttonM.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonL
             // 
@@ -409,7 +424,7 @@
             this.buttonL.Text = "L";
             this.buttonL.UseVisualStyleBackColor = true;
             this.buttonL.Click += new System.EventHandler(this.buttonA2Z_Click);
-            this.buttonL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
+            this.buttonL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonK
             // 
@@ -420,7 +435,7 @@
             this.buttonK.Text = "K";
             this.buttonK.UseVisualStyleBackColor = true;
             this.buttonK.Click += new System.EventHandler(this.buttonA2Z_Click);
-            this.buttonK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
+            this.buttonK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonJ
             // 
@@ -431,7 +446,7 @@
             this.buttonJ.Text = "J";
             this.buttonJ.UseVisualStyleBackColor = true;
             this.buttonJ.Click += new System.EventHandler(this.buttonA2Z_Click);
-            this.buttonJ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
+            this.buttonJ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonI
             // 
@@ -442,7 +457,7 @@
             this.buttonI.Text = "I";
             this.buttonI.UseVisualStyleBackColor = true;
             this.buttonI.Click += new System.EventHandler(this.buttonA2Z_Click);
-            this.buttonI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
+            this.buttonI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonH
             // 
@@ -453,7 +468,7 @@
             this.buttonH.Text = "H";
             this.buttonH.UseVisualStyleBackColor = true;
             this.buttonH.Click += new System.EventHandler(this.buttonA2Z_Click);
-            this.buttonH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
+            this.buttonH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonG
             // 
@@ -464,6 +479,7 @@
             this.buttonG.Text = "G";
             this.buttonG.UseVisualStyleBackColor = true;
             this.buttonG.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonF
             // 
@@ -474,6 +490,7 @@
             this.buttonF.Text = "F";
             this.buttonF.UseVisualStyleBackColor = true;
             this.buttonF.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonE
             // 
@@ -484,6 +501,7 @@
             this.buttonE.Text = "E";
             this.buttonE.UseVisualStyleBackColor = true;
             this.buttonE.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonD
             // 
@@ -494,6 +512,7 @@
             this.buttonD.Text = "D";
             this.buttonD.UseVisualStyleBackColor = true;
             this.buttonD.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonC
             // 
@@ -504,6 +523,7 @@
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = true;
             this.buttonC.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonB
             // 
@@ -514,6 +534,7 @@
             this.buttonB.Text = "B";
             this.buttonB.UseVisualStyleBackColor = true;
             this.buttonB.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // buttonA
             // 
@@ -524,6 +545,7 @@
             this.buttonA.Text = "A";
             this.buttonA.UseVisualStyleBackColor = true;
             this.buttonA.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             // 
             // picturePanel
             // 
@@ -644,6 +666,7 @@
             this.Text = "Hangman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Hangman_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
             this.buttonPanel.ResumeLayout(false);
             this.buttonPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).EndInit();

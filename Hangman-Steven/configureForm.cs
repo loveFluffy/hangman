@@ -588,7 +588,7 @@ namespace Hangman_Steven
 
         //Ok
         private void okButton_Click(object sender, EventArgs e)
-        {
+        {   
             //检查合理性(可能还需要继续补充其他代码，检查其他变量的合理性)
             if (letterTrackBar.Value >= wordTrackBar.Value)
             {
