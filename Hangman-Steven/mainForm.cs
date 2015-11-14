@@ -1963,16 +1963,16 @@ namespace Hangman_Steven
         {
 
             //test code
-            //if (e.KeyCode == Keys.B && e.Modifiers == Keys.Control)
-            //{
-            //    MessageBox.Show("Ctrl+A");
-            //}
+            if (e.KeyCode == Keys.B && e.Modifiers == Keys.Control)
+            {
+                MessageBox.Show("Ctrl+A");
+            }
 
             //test code
-            //if (e.KeyCode == Keys.A)
-            //{
-            //    MessageBox.Show("A");
-            //}
+            if (e.KeyCode == Keys.A)
+            {
+                MessageBox.Show("A");
+            }
 
         }
         
@@ -1980,6 +1980,4 @@ namespace Hangman_Steven
         
         
     }
-
-    /////
 }
