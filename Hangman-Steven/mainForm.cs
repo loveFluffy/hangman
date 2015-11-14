@@ -16,6 +16,10 @@ namespace Hangman_Steven
 {
     public partial class Hangman : Form
     {
+        //test code
+        //MouseHook mouseHook;
+        //KeyBordHook keybordHook;
+
         ///////////////////////
         //设置界面传回值变量
         //（其实这部分没必要赋初始值，
@@ -579,6 +583,10 @@ namespace Hangman_Steven
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
+            //test code
+            
+
+
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
 
