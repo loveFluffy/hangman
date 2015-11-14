@@ -409,6 +409,7 @@
             this.buttonL.Text = "L";
             this.buttonL.UseVisualStyleBackColor = true;
             this.buttonL.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // buttonK
             // 
@@ -419,6 +420,7 @@
             this.buttonK.Text = "K";
             this.buttonK.UseVisualStyleBackColor = true;
             this.buttonK.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // buttonJ
             // 
@@ -429,6 +431,7 @@
             this.buttonJ.Text = "J";
             this.buttonJ.UseVisualStyleBackColor = true;
             this.buttonJ.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonJ.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // buttonI
             // 
@@ -439,6 +442,7 @@
             this.buttonI.Text = "I";
             this.buttonI.UseVisualStyleBackColor = true;
             this.buttonI.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // buttonH
             // 
@@ -449,6 +453,7 @@
             this.buttonH.Text = "H";
             this.buttonH.UseVisualStyleBackColor = true;
             this.buttonH.Click += new System.EventHandler(this.buttonA2Z_Click);
+            this.buttonH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // buttonG
             // 
@@ -638,10 +643,7 @@
             this.Name = "Hangman";
             this.Text = "Hangman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Activated += new System.EventHandler(this.Hangman_Activated);
             this.Load += new System.EventHandler(this.Hangman_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Hangman_KeyDown);
-            this.Leave += new System.EventHandler(this.Hangman_Leave);
             this.buttonPanel.ResumeLayout(false);
             this.buttonPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).EndInit();
