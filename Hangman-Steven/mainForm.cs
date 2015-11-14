@@ -1363,158 +1363,158 @@ namespace Hangman_Steven
         {
             //axWindowsMediaPlayer.settings.playCount = 1;
             //axWindowsMediaPlayer.URL = Application.StartupPath + "\\a2z\\a.mp3";
-            int tmpNum = buttonClick("a", buttonA);
-            changePicturePanel(letterA, tmpNum);
+            //int tmpNum = buttonClick("a", buttonA);
+            //changePicturePanel(letterA, tmpNum);
         }
         
         private void buttonB_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("b", buttonB);
-            changePicturePanel(letterB, tmpNum);
+            //int tmpNum = buttonClick("b", buttonB);
+            //changePicturePanel(letterB, tmpNum);
         }
 
         private void buttonC_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("c", buttonC);
-            changePicturePanel(letterC, tmpNum);
+            //int tmpNum = buttonClick("c", buttonC);
+            //changePicturePanel(letterC, tmpNum);
         }
 
         private void buttonD_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("d", buttonD);
-            changePicturePanel(letterD, tmpNum);
+            //int tmpNum = buttonClick("d", buttonD);
+            //changePicturePanel(letterD, tmpNum);
         }
 
         private void buttonE_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("e", buttonE);
-            changePicturePanel(letterE, tmpNum);
+            //int tmpNum = buttonClick("e", buttonE);
+            //changePicturePanel(letterE, tmpNum);
         }
 
         private void buttonF_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("f", buttonF);
-            changePicturePanel(letterF, tmpNum);
+            //int tmpNum = buttonClick("f", buttonF);
+            //changePicturePanel(letterF, tmpNum);
         }
 
         private void buttonG_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("g", buttonG);
-            changePicturePanel(letterG, tmpNum);
+            //int tmpNum = buttonClick("g", buttonG);
+            //changePicturePanel(letterG, tmpNum);
         }
 
         private void buttonH_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("h", buttonH);
-            changePicturePanel(letterH, tmpNum);
+            //int tmpNum = buttonClick("h", buttonH);
+            //changePicturePanel(letterH, tmpNum);
         }
 
         private void buttonI_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("i", buttonI);
-            changePicturePanel(letterI, tmpNum);
+            //int tmpNum = buttonClick("i", buttonI);
+            //changePicturePanel(letterI, tmpNum);
         }
 
         private void buttonJ_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("j", buttonJ);
-            changePicturePanel(letterJ, tmpNum);
+            //int tmpNum = buttonClick("j", buttonJ);
+            //changePicturePanel(letterJ, tmpNum);
         }
 
         private void buttonK_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("k", buttonK);
-            changePicturePanel(letterK, tmpNum);
+            //int tmpNum = buttonClick("k", buttonK);
+            //changePicturePanel(letterK, tmpNum);
         }
 
         private void buttonL_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("l", buttonL);
-            changePicturePanel(letterL, tmpNum);
+            //int tmpNum = buttonClick("l", buttonL);
+            //changePicturePanel(letterL, tmpNum);
         }
 
         private void buttonM_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("m", buttonM);
-            changePicturePanel(letterM, tmpNum);
+            //int tmpNum = buttonClick("m", buttonM);
+            //changePicturePanel(letterM, tmpNum);
         }
 
         private void buttonN_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("n", buttonN);
-            changePicturePanel(letterN, tmpNum);
+            //int tmpNum = buttonClick("n", buttonN);
+            //changePicturePanel(letterN, tmpNum);
         }
 
         private void buttonO_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("o", buttonO);
-            changePicturePanel(letterO, tmpNum);
+            //int tmpNum = buttonClick("o", buttonO);
+            //changePicturePanel(letterO, tmpNum);
         }
 
         private void buttonP_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("p", buttonP);
-            changePicturePanel(letterP, tmpNum);
+            //int tmpNum = buttonClick("p", buttonP);
+            //changePicturePanel(letterP, tmpNum);
         }
 
         private void buttonQ_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("q", buttonQ);
-            changePicturePanel(letterQ, tmpNum);
+            //int tmpNum = buttonClick("q", buttonQ);
+            //changePicturePanel(letterQ, tmpNum);
         }
 
         private void buttonR_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("r", buttonR);
-            changePicturePanel(letterR, tmpNum);
+            //int tmpNum = buttonClick("r", buttonR);
+            //changePicturePanel(letterR, tmpNum);
         }
 
         private void buttonS_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("s", buttonS);
-            changePicturePanel(letterS, tmpNum);
+            //int tmpNum = buttonClick("s", buttonS);
+            //changePicturePanel(letterS, tmpNum);
         }
 
         private void buttonT_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("t", buttonT);
-            changePicturePanel(letterT, tmpNum);
+            //int tmpNum = buttonClick("t", buttonT);
+            //changePicturePanel(letterT, tmpNum);
         }
 
         private void buttonU_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("u", buttonU);
-            changePicturePanel(letterU, tmpNum);
+            //int tmpNum = buttonClick("u", buttonU);
+            //changePicturePanel(letterU, tmpNum);
         }
 
         private void buttonV_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("v", buttonV);
-            changePicturePanel(letterV, tmpNum);
+            //int tmpNum = buttonClick("v", buttonV);
+            //changePicturePanel(letterV, tmpNum);
         }
 
         private void buttonW_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("w", buttonW);
-            changePicturePanel(letterW, tmpNum);
+            //int tmpNum = buttonClick("w", buttonW);
+            //changePicturePanel(letterW, tmpNum);
         }
 
         private void buttonX_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("x", buttonX);
-            changePicturePanel(letterX, tmpNum);
+            //int tmpNum = buttonClick("x", buttonX);
+            //changePicturePanel(letterX, tmpNum);
         }
 
         private void buttonY_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("y", buttonY);
-            changePicturePanel(letterY, tmpNum);
+            //int tmpNum = buttonClick("y", buttonY);
+            //changePicturePanel(letterY, tmpNum);
         }
 
         private void buttonZ_Click(object sender, EventArgs e)
         {
-            int tmpNum = buttonClick("z", buttonZ);
-            changePicturePanel(letterZ, tmpNum);
+            //int tmpNum = buttonClick("z", buttonZ);
+            //changePicturePanel(letterZ, tmpNum);
         }
 
 

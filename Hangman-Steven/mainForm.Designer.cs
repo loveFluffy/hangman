@@ -33,6 +33,7 @@
             this.mainScreen = new System.Windows.Forms.RichTextBox();
             this.timeBar = new System.Windows.Forms.ProgressBar();
             this.buttonPanel = new System.Windows.Forms.Panel();
+            this.tmpPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.arrowLabel = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.ConfigureButton = new System.Windows.Forms.Button();
@@ -79,13 +80,12 @@
             this.TeamLabel2 = new System.Windows.Forms.Label();
             this.TeamLabel1 = new System.Windows.Forms.Label();
             this.barTimer = new System.Windows.Forms.Timer(this.components);
-            this.tmpPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.buttonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chooseSentence)).BeginInit();
             this.picturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // mainScreen
@@ -152,6 +152,16 @@
             this.buttonPanel.Size = new System.Drawing.Size(743, 318);
             this.buttonPanel.TabIndex = 2;
             this.buttonPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonPanel_Paint);
+            // 
+            // tmpPlayer
+            // 
+            this.tmpPlayer.Enabled = true;
+            this.tmpPlayer.Location = new System.Drawing.Point(422, 193);
+            this.tmpPlayer.Name = "tmpPlayer";
+            this.tmpPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tmpPlayer.OcxState")));
+            this.tmpPlayer.Size = new System.Drawing.Size(75, 23);
+            this.tmpPlayer.TabIndex = 46;
+            this.tmpPlayer.Visible = false;
             // 
             // arrowLabel
             // 
@@ -616,16 +626,6 @@
             this.barTimer.Interval = 1;
             this.barTimer.Tick += new System.EventHandler(this.barTimer_Tick);
             // 
-            // tmpPlayer
-            // 
-            this.tmpPlayer.Enabled = true;
-            this.tmpPlayer.Location = new System.Drawing.Point(422, 193);
-            this.tmpPlayer.Name = "tmpPlayer";
-            this.tmpPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tmpPlayer.OcxState")));
-            this.tmpPlayer.Size = new System.Drawing.Size(75, 23);
-            this.tmpPlayer.TabIndex = 46;
-            this.tmpPlayer.Visible = false;
-            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -637,17 +637,18 @@
             this.Controls.Add(this.mainScreen);
             this.Name = "Hangman";
             this.Text = "Hangman";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Hangman_Activated);
             this.Load += new System.EventHandler(this.Hangman_Load);
             this.Leave += new System.EventHandler(this.Hangman_Leave);
             this.buttonPanel.ResumeLayout(false);
             this.buttonPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chooseSentence)).EndInit();
             this.picturePanel.ResumeLayout(false);
             this.picturePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tmpPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
