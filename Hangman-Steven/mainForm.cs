@@ -18,8 +18,10 @@ namespace Hangman_Steven
     public partial class Hangman : Form
     {
         //test code
-        MouseHook mouseHook;
-        KeyBordHook keybordHook;
+        
+
+        
+
 
         ///////////////////////
         //设置界面传回值变量
@@ -581,12 +583,51 @@ namespace Hangman_Steven
 
 
 
+
+
+
+        //键盘事件处理程序
+        public void key_OnMouseActivity(object sender, KeyEventArgs e)
+        {
+            //listBox1.Items.Add(e.KeyCode.ToString());
+            //listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            Application.DoEvents();
+        }
+
+        //鼠标事件处理程序
+        void mouseHook_OnMouseActivity(object sender, MouseEventArgs e)
+        {
+            //listBox1.Items.Add(e.Location.ToString());
+            //listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            Application.DoEvents();
+        }
+
         //mainForm加载时的初始化工作（这里面函数的调用顺序是不可乱改的）
         private void Hangman_Load(object sender, EventArgs e)
         {
             //test code
-            
+            MouseHook mouseHook;
+            KeyBordHook KeyHook;
 
+            try
+            {
+                //安装键盘钩子
+                KeyHook = new KeyBordHook();
+                KeyHook.OnKeyDownEvent += new KeyEventHandler(key_OnMouseActivity);
+
+                //安装鼠标钩子
+                mouseHook = new MouseHook();
+                mouseHook.OnMouseActivity += new MouseEventHandler(mouseHook_OnMouseActivity);
+                mouseHook.Start();
+            }
+            catch (System.Exception ex)
+            {
+                //listBox1.Items.Add(ex.Message);
+                MessageBox.Show(ex.Message);
+                Application.DoEvents();
+            }
+
+            
 
             //主窗口控件布局（在Hangman_Load中只调用一次）
             setPosition();
