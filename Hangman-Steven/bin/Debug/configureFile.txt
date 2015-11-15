@@ -2,7 +2,7 @@
 1
 500
 2
-0
+4
 0
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\letterFailure.mp3
 C:\Users\Administrator.USER-20150504BT\Desktop\Hangman-Steven\Hangman-Steven\bin\Debug\music\letterSuccess.mp3

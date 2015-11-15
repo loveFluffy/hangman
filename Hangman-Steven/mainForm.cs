@@ -1652,6 +1652,8 @@ namespace Hangman_Steven
             //stop timer
             if (e.KeyCode == Keys.Space)
             {
+                //MessageBox.Show("test message1.");
+                startGameButton.Focus();
                 //没有键是可以按的
                 if (!checkButtonsEnable())
                 {
@@ -1676,6 +1678,7 @@ namespace Hangman_Steven
 
             if (e.Modifiers==Keys.None)
             {
+                //MessageBox.Show("test message 2");
                 if (tmpLetter.Equals("A") && buttonA.Enabled)
                 {
                     buttonA2Z_Click(buttonA, e);
