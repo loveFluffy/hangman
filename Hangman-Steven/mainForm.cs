@@ -119,6 +119,11 @@ namespace Hangman_Steven
         private void resetFocus()
         {
             buttonA.Focus();
+            //ConfigureButton.Focus();
+            //startGameButton.Focus();
+            //this.Focus();
+            //mainScreen.Focus();
+            //chooseSentence.Focus();
         }
 
         ///////////////////////
@@ -664,7 +669,7 @@ namespace Hangman_Steven
                 startGameButton.Enabled = true;
             }
 
-            resetFocus();
+            //resetFocus();
         }
 
         private void verticalLine_Click(object sender, EventArgs e)
@@ -1644,8 +1649,6 @@ namespace Hangman_Steven
 
         private void Hangman_KeyDown(object sender, KeyEventArgs e)
         {
-            string tmpLetter=e.KeyCode.ToString();
-
             //stop timer
             if (e.KeyCode == Keys.Space)
             {
@@ -1657,17 +1660,19 @@ namespace Hangman_Steven
                 if (barTimer.Enabled == true)
                 {
                     barTimer.Enabled = false;
-                    timeBar.Value = 0;
+                    //timeBar.Value = 0;
                 }
                 else
                 {
                     barTimer.Enabled = true;
                 }
 
+                resetFocus();
+
                 return;
             }
 
-            
+            string tmpLetter = e.KeyCode.ToString();
 
             if (e.Modifiers==Keys.None)
             {
